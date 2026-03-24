@@ -1,0 +1,543 @@
+@import "tailwindcss";
+
+/* =====================================================
+   AUTEUR.FILM - RETRO DESIGN SYSTEM
+   Light, quirky, fun. For artists, hipsters & outsiders.
+   ===================================================== */
+
+:root {
+  /* Light retro color palette */
+  --background: #FFF8F0;           /* Warm cream paper */
+  --background-alt: #FFF1E6;       /* Slightly warmer cream */
+  --foreground: #1a1a1a;           /* Near black text */
+
+  /* Primary: Hot coral/red */
+  --primary: #FF6B6B;
+  --primary-dark: #E55555;
+  --primary-light: #FF8A8A;
+
+  /* Secondary: Electric teal */
+  --secondary: #4ECDC4;
+  --secondary-dark: #3DB8B0;
+  --secondary-light: #6EE7DF;
+
+  /* Accent: Sunshine yellow */
+  --accent: #FFE66D;
+  --accent-dark: #F5D93A;
+
+  /* Fun purples for variety */
+  --purple: #9B5DE5;
+  --purple-dark: #7B3DC5;
+
+  /* Neutrals */
+  --card: #FFFFFF;
+  --card-foreground: #1a1a1a;
+  --muted: #E8E0D8;
+  --muted-foreground: #666666;
+  --border: #D4C8BC;
+  --border-dark: #1a1a1a;
+
+  /* Status */
+  --destructive: #FF6B6B;
+  --success: #4ECDC4;
+
+  /* Shadows for 3D effect */
+  --shadow-color: #1a1a1a;
+  --shadow-offset: 4px;
+
+  /* Spacing */
+  --radius: 0px;  /* Sharp corners - very retro */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-pixel);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* =====================================================
+   RETRO TYPOGRAPHY
+   ===================================================== */
+
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+}
+
+/* Chunky headings */
+h1, h2, h3 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 800;
+}
+
+/* =====================================================
+   3D RETRO BUTTONS - The star of the show!
+   ===================================================== */
+
+.btn-retro {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid var(--shadow-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-retro:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.btn-retro:active,
+.btn-retro.pressed {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: 0 0 0 var(--shadow-color);
+}
+
+.btn-retro:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+/* Button color variants */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-light);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+.btn-accent:hover {
+  background: var(--accent-dark);
+}
+
+.btn-purple {
+  background: var(--purple);
+  color: white;
+}
+
+.btn-purple:hover {
+  background: var(--purple-dark);
+}
+
+.btn-outline {
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.btn-outline:hover {
+  background: var(--muted);
+}
+
+/* Button sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* =====================================================
+   RETRO CARDS
+   ===================================================== */
+
+.card-retro {
+  background: var(--card);
+  border: 3px solid var(--shadow-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  transition: transform 0.15s steps(3), box-shadow 0.15s steps(3);
+}
+
+.card-retro:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.card-retro-static {
+  background: var(--card);
+  border: 3px solid var(--shadow-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+/* =====================================================
+   RETRO INPUTS
+   ===================================================== */
+
+.input-retro {
+  background: var(--card);
+  border: 3px solid var(--shadow-color);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body), system-ui, sans-serif;
+  transition: box-shadow 0.1s steps(2);
+}
+
+.input-retro:focus {
+  outline: none;
+  box-shadow: 4px 4px 0 var(--primary);
+}
+
+.input-retro::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* =====================================================
+   RETRO BADGES & TAGS
+   ===================================================== */
+
+.badge-retro {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--shadow-color);
+  box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.badge-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.badge-secondary {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.badge-accent {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+/* =====================================================
+   STEPPED ANIMATIONS - Very retro feel!
+   ===================================================== */
+
+@keyframes bounce-retro {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes pulse-shadow {
+  0%, 100% {
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  }
+  50% {
+    box-shadow: 6px 6px 0 var(--primary);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-4px) rotate(-1deg); }
+  66% { transform: translateY(-2px) rotate(1deg); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-bounce-retro {
+  animation: bounce-retro 0.6s steps(6) infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s steps(4) infinite;
+}
+
+.animate-blink {
+  animation: blink 1s steps(2) infinite;
+}
+
+.animate-pulse-shadow {
+  animation: pulse-shadow 2s steps(4) infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Hover animations */
+.hover-wiggle:hover {
+  animation: wiggle 0.3s steps(4);
+}
+
+.hover-bounce:hover {
+  animation: bounce-retro 0.4s steps(4);
+}
+
+/* =====================================================
+   RETRO SCROLLBAR
+   ===================================================== */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border: 2px solid var(--border-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--border-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* =====================================================
+   DECORATIVE ELEMENTS
+   ===================================================== */
+
+/* Dotted pattern background */
+.bg-dots {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Grid pattern */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Zig-zag border */
+.border-zigzag {
+  background: linear-gradient(135deg, var(--background) 25%, transparent 25%) -10px 0,
+              linear-gradient(225deg, var(--background) 25%, transparent 25%) -10px 0,
+              linear-gradient(315deg, var(--background) 25%, transparent 25%),
+              linear-gradient(45deg, var(--background) 25%, transparent 25%);
+  background-size: 20px 10px;
+  background-color: var(--primary);
+}
+
+/* =====================================================
+   YOUTUBE PLAYER - Hide all branding
+   ===================================================== */
+
+.youtube-player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border: 3px solid var(--shadow-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  background: var(--foreground);
+}
+
+.youtube-player-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hide YouTube branding via CSS where possible */
+/* Target the YouTube logo and watermark areas */
+.youtube-player-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 60px;
+  background: linear-gradient(to left, rgba(0,0,0,0.9), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.youtube-player-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(to left, rgba(0,0,0,1), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+/* Text colors */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--muted-foreground); }
+
+/* Background colors */
+.bg-cream { background: var(--background); }
+.bg-cream-alt { background: var(--background-alt); }
+.bg-card { background: var(--card); }
+.bg-primary { background: var(--primary); }
+.bg-secondary { background: var(--secondary); }
+.bg-accent { background: var(--accent); }
+
+/* Borders */
+.border-thick { border-width: 3px; }
+.border-dark { border-color: var(--shadow-color); }
+
+/* Shadows */
+.shadow-retro {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+.shadow-retro-lg {
+  box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+/* No select for interactive elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* =====================================================
+   FOCUS STATES (Accessibility)
+   ===================================================== */
+
+.focus-retro:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   FUN EXTRAS
+   ===================================================== */
+
+/* Typewriter cursor */
+.cursor-blink::after {
+  content: '▋';
+  animation: blink 1s steps(2) infinite;
+  color: var(--primary);
+}
+
+/* Strikethrough sale price */
+.price-old {
+  text-decoration: line-through;
+  color: var(--muted-foreground);
+}
+
+/* Loading dots */
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(4) infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+}
+
+/* Rainbow text (for fun moments) */
+.text-rainbow {
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent),
+    var(--secondary),
+    var(--purple),
+    var(--primary)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
