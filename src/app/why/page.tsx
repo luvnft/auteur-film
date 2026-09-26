@@ -32,13 +32,13 @@ export default function WhyAuteurPage() {
         <div className="max-w-3xl mx-auto relative">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFE66D] border-3 border-[#1a1a1a] shadow-[4px_4px_0_#1a1a1a] text-sm font-bold text-[#1a1a1a] mb-8 hover-wiggle">
             <Sparkles className="h-4 w-4" />
-            WHY AUTEUR
+            WHY FLIX.
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-[var(--font-pixel)] tracking-wider mb-6 leading-tight text-[#1a1a1a]">
             A NEW ERA OF
             <br />
-            <span className="text-[#FF6B6B]">FILMMAKING</span>
+            <span className="text-[#FF6B6B]">SHORT FLIX</span>
             <br />
             IS HERE.
           </h1>
@@ -70,7 +70,7 @@ export default function WhyAuteurPage() {
               This content doesn't belong on platforms designed for 15-second videos or algorithm-driven feeds. It needs a dedicated home where it can be discovered, watched, and supported on its own terms.
             </p>
             <p className="text-[#1a1a1a] font-bold text-xl">
-              Auteur is that home.
+              FLIX. is that home.
             </p>
           </div>
         </div>
@@ -91,10 +91,10 @@ export default function WhyAuteurPage() {
 
           <div className="space-y-6 text-[#666] text-lg leading-relaxed font-medium">
             <p>
-              On every other platform, fans are passive consumers. You watch, you scroll, you leave. On Auteur, your support actually matters — and you're rewarded for it.
+              On every other platform, fans are passive consumers. You watch, you scroll, you leave. On FLIX., your support actually matters — and you're rewarded for it.
             </p>
             <p>
-              Every piece of content on Auteur has a <strong className="text-[#1a1a1a]">Leaderboard</strong>. When you watch a film, tip the creator, leave a comment, pin it to your favorites, or refer a friend — you earn points and climb the ranks. Top supporters get recognized and can earn platform rewards.
+              Every piece of content on FLIX. has a <strong className="text-[#1a1a1a]">Leaderboard</strong>. When you watch a film, tip the creator, leave a comment, pin it to your favorites, or refer a friend — you earn points and climb the ranks. Top supporters get recognized and can earn platform rewards.
             </p>
           </div>
 
@@ -219,7 +219,7 @@ export default function WhyAuteurPage() {
             )}
             <Link href="/browse">
               <Button variant="outline" size="lg">
-                Explore Films
+                Explore FLIX.
               </Button>
             </Link>
           </div>
@@ -233,7 +233,7 @@ export default function WhyAuteurPage() {
             <div className="h-8 w-8 bg-[#FF6B6B] border-2 border-[#1a1a1a] flex items-center justify-center">
               <Film className="h-4 w-4 text-white" />
             </div>
-            <span className="font-[var(--font-pixel)] text-xs tracking-wider">AUTEUR.FILM</span>
+            <span className="font-[var(--font-pixel)] text-xs tracking-wider">FLIX.LUMEEBOOTH.COM</span>
           </div>
           <div className="flex items-center gap-6 uppercase tracking-wide text-xs">
             <Link href="/terms" className="hover:text-[#FF6B6B] transition-colors">Terms</Link>

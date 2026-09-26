@@ -88,7 +88,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <Link href="/why" onClick={playClick}>
             <h2 className="text-3xl font-[var(--font-pixel)] text-center mb-4 tracking-wider hover:text-[#FF6B6B] transition-colors">
-              WHY AUTEUR?
+              WHY FLIX.?
             </h2>
           </Link>
           <div className="h-1 w-24 bg-[#4ECDC4] mx-auto mb-6" />
@@ -250,7 +250,7 @@ export default function Home() {
               onClick={playClick}
               className="hover:text-[#FF6B6B] transition-colors"
             >
-              Why Auteur
+              Why FLIX.
             </Link>
           </div>
         </div>
