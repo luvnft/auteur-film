@@ -45,7 +45,7 @@ export function Header() {
               <Sparkles className="absolute -top-1 -right-1 h-3 w-3 text-[#FFE66D] animate-pulse" />
             </div>
             <span className="text-xl font-bold font-[var(--font-pixel)] tracking-wider text-[#1a1a1a]">
-              AUTEUR
+              FLIX.
             </span>
           </Link>
 
